@@ -1,52 +1,22 @@
 <html>
-    <table cellpadding="10" border="1px">
-        <thead>
-            <tr>
-                <th>Español</th>
-                <th>Ingles</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Goodbay</td>
-                <td>Adios</td>
-            </tr>
-            <tr>
-                <td>Hello</td>
-                <td>Hola</td>
-            </tr>
-            <tr>
-                <td>Where</td>
-                <td>Donde</td>
-            </tr>
-            <tr>
-                <td>What</td>
-                <td>Que</td>
-            </tr>
-            <tr>
-                <td>Cookie</td>
-                <td>Galleta</td>
-            </tr>
-            <tr>
-                <td>Substitution</td>
-                <td>Substitucion</td>
-            </tr>
-            <tr>
-                <td>Consistency</td>
-                <td>Consistencia</td>
-            </tr>
-            <tr>
-                <td>Exhibition</td>
-                <td>Exibicion</td>
-            </tr>
-            <tr>
-                <td>Awakening</td>
-                <td>Despertar</td>
-            </tr>
-            <tr>
-                <td>Artist</td>
-                <td>Artista</td>
-            </tr>
-        </tbody>
-    </table>
+<?php
+$Idioma = array(home=>'Casa', defense=>'defensa', sword=>'espada', 
+ball=>'Bola', Goodbay=>'Adios',Hello=>'Hola', 
+what=> 'Que', Where=>'Donde', Cookie=> 'Galleta',Awakening => 'Despertar');
+echo "<table cellpadding='10'border='1px'>
+<thead>
+    <tr>
+        <th>Español</th>
+        <th>Ingles</th>
+    </tr>
+</thead>";
+foreach ($Idioma as $Palabra => $Ingles) {    
+    echo "<tbody>
+    <tr>
+        <td>$Idioma[$Palabra]</td>
+        <td>$Palabra</td>
+    </tr>
+    </tbody>";
+    }
+?>
 </html>
