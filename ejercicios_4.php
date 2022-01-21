@@ -19,6 +19,7 @@
                 <td>ASX</td>
                 <td>ASX</td>
                 <td>IAW</td>"
+
                 ?>
             </tr>
             <tr>
@@ -55,6 +56,19 @@
                 <td>ASO</td>
                 <td>IAW</td>
                 <td>SAD</td>"
+                $horario = array(
+                    '8:50 - 9:40' => array('IAW','SAD','ASX','ASX','IAW'),
+                    '9:40 - 10:30' => array('IAW','SAD','EIEA','ASX','SRI'),
+                    '10:30 - 11:20' => array('SRI','SAD','EIEA','EIEA','SRI'),
+                    '11:20 - 12:00' => array('Recreo'),
+                    '12:00 - 12:50' => array('SRI','ASO','ASO','IAW','SAD'),
+                    '12:50 - 13:40' => array('ASO','ASO','IAW','IAW','SAD'),
+                    '13:40 - 14:30' => array('ASX','ASO','IAW','SRI','SAD'),
+                    '14:30 - 16:00' => array('KEBAB'),
+                    '16:00 - 16:50' => array('','SRI','','ASO',''),
+                    '16:50 - 17:40' => array('','SRI','','ASO',''),
+                    '17:40 - 18:60' => array('','SRI','','ASO',''), 
+                );
                 ?>
             </tr>
             <tr>
