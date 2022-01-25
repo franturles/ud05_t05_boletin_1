@@ -12,51 +12,8 @@
         </thead>
         <tbody>
             <tr>
-                <?php
-                echo "<td>8:50-9:40</td> 
-                <td>IAW</td>
-                <td>SAD</td>
-                <td>ASX</td>
-                <td>ASX</td>
-                <td>IAW</td>"
-
-                ?>
-            </tr>
-            <tr>
                 <?php 
-                 echo "<td>9:40-10:30</td>
-                <td>IAW</td>
-                <td>SAD</td>
-                <td>EIEA</td>
-                <td>ASX</td>
-                <td>SRI</td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>10:30-11:20</td>
-                <td>SRI</td>
-                <td>SAD</td>
-                <td>EIEA</td>
-                <td>EIEA</td>
-                <td>SRI</td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>11:20-12:00</td>"
-                ?>
-                <td colspan="5" align="Center">RECREO</td>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>12:00-12:50</td>
-                <td>SRI</td>
-                <td>ASO</td>
-                <td>ASO</td>
-                <td>IAW</td>
-                <td>SAD</td>"
-                $horario = array(
+                $horario=array(
                     '8:50 - 9:40' => array('IAW','SAD','ASX','ASX','IAW'),
                     '9:40 - 10:30' => array('IAW','SAD','EIEA','ASX','SRI'),
                     '10:30 - 11:20' => array('SRI','SAD','EIEA','EIEA','SRI'),
@@ -67,63 +24,23 @@
                     '14:30 - 16:00' => array('KEBAB'),
                     '16:00 - 16:50' => array('','SRI','','ASO',''),
                     '16:50 - 17:40' => array('','SRI','','ASO',''),
-                    '17:40 - 18:60' => array('','SRI','','ASO',''), 
+                    '17:40 - 18:60' => array('','SRI','','ASO','')
                 );
-                ?>
-            </tr>
-            <tr>
-                <?php
-                echo "<td>12:50-13:40</td>
-                <td>ASO</td>
-                <td>ASO</td>
-                <td>IAW</td>
-                <td>IAW</td>
-                <td>SAD</td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>13:40-14:30</td>
-                <td>ASX</td>
-                <td>ASO</td>
-                <td>IAW</td>
-                <td>SRI</td>
-                <td>SAD</td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>14:30-16:00</td>"?>
-                <td colspan="5" align="Center">KEBAB</td>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>16:00-16:50</td>
-                <td></td>
-                <td>SRI</td>
-                <td></td>
-                <td>ASO</td>
-                <td></td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>16:50-17:40</td>
-                <td></td>
-                <td>SRI</td>
-                <td></td>
-                <td>ASO</td>
-                <td></td>"
-                ?>
-            </tr>
-            <tr>
-                <?php 
-                echo "<td>17:10-18:30</td>
-                <td></td>
-                <td>SRI</td>
-                <td></td>
-                <td>ASO</td>
-                <td></td>"
+                foreach($horario as $dia => $clase) {
+                    if (count ($clase) >1) {
+                        echo "<tr>
+                        <td>$dia</td>
+                        <td>$clase[0]</td>
+                        <td>$clase[1]</td>
+                        <td>$clase[2]</td>
+                        <td>$clase[3]</td>
+                        <td>$clase[4]</td>";
+                    } else {
+                        echo "<tr>
+                        <td>$dia</td>
+                        <td colspan = 5 style='text-align:center'>$clase[0]</td>";
+                    }
+                };
                 ?>
             </tr>
         </tbody>
