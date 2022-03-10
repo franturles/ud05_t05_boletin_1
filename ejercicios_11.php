@@ -1,24 +1,30 @@
 <html>
-    <a>  *</a></br>
-    <?php
-    for($i=1;$i <= 10; $i++){
-        for ($m = 1; $m <= 1; $m++){
-            echo "*";
-        }
-        for ($m = 1; $m <= $i*2; $m++){
-            echo "&nbsp";
-        }
-        for ($m = 1; $m <= 1; $m++){
-            echo "*";
-        }
-        for ($m = 1; $m <= 10;$m++){
-            echo "&nbsp";
-        }
-        echo '<br>';
-    }
-    for ($m = 1; $m <= 9; $m++){
-        echo "*";
-        echo "&nbsp";
-    }
-    ?>
+	<body>
+		<?php
+            for ($i=1; $i <=9 ; $i++) { 
+                if ($i==9){
+                    for ($m=1; $m <= $i; $m++) { 
+                        echo "*";
+                    }
+                    echo "<br/>";
+                }
+                else{
+                    if ($i<=2){
+                        for ($m=1; $m <= $i; $m++) { 
+                            echo "*";
+                        }
+                        echo "<br/>";
+                    }
+                    else{
+                        echo "*";
+                        for ($m=1; $m <= $i-2; $m++) { 
+                            echo "&nbsp&nbsp";
+                        }
+                        echo "*";
+                        echo "<br/>";
+                    }
+                }
+            };
+		?>
+	</body>
 </html>
