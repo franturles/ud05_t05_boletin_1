@@ -1,8 +1,8 @@
 <html>
 <?php
-$Idioma = array(home=>'Casa', defense=>'defensa', sword=>'espada', 
-ball=>'Bola', Goodbay=>'Adios',Hello=>'Hola', 
-what=> 'Que', Where=>'Donde', Cookie=> 'Galleta',Awakening => 'Despertar');
+$Idioma = array('home'=>'Casa', 'defense'=>'defensa', 'sword'=>'espada', 
+'ball'=>'Bola', 'Goodbay'=>'Adios','Hello'=>'Hola', 
+'what'=> 'Que', 'Where'=>'Donde', 'Cookie'=> 'Galleta','Awakening' => 'Despertar');
 echo "<table cellpadding='10'border='1px'>
 <thead>
     <tr>
@@ -13,7 +13,7 @@ echo "<table cellpadding='10'border='1px'>
 foreach ($Idioma as $Palabra => $Ingles) {    
     echo "<tbody>
     <tr>
-        <td>$Idioma[$Palabra]</td>
+        <td>$Ingles</td>
         <td>$Palabra</td>
     </tr>
     </tbody>";
